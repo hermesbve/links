@@ -29,6 +29,9 @@ social:
 #  - platform: Facebook
 #    url:      https://facebook.com/f2p
 #    icon:     ti ti-brand-facebook
+  - platform: Github
+    url:      https://github.com/hermesbve/
+    icon:     ti ti-brand-github
   - platform: Pinterest
     url:      https://pinterest.com/b4rtbe
     icon:     ti ti-brand-pinterest
