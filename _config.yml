@@ -42,7 +42,7 @@ sections:
     links:
       - title:       "www.f2p.be"
         url:         https://f2p.be
-        description: "the main site"
+        description: "Test Jekyll & Minimal Mistakes"
         icon:        ti ti-world
 
   - section_title: "Side Projects"
