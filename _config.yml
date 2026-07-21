@@ -48,6 +48,13 @@ sections:
         description: "Test Jekyll & Minimal Mistakes"
         icon:        ti ti-world
 
+  - section_title: "Code"
+    links:
+      - title:       "hermesbve"
+        url:         https://github.com/hermesbve/
+        description: "My GitHub profile — repos, code, and projects"
+        icon:        ti ti-brand-github
+
   - section_title: "Side Projects"
     links:
       - title:       "My Start Page"
