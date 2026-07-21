@@ -2,59 +2,59 @@
 # f2p Links — Jekyll config
 # =============================================================================
 
-title:       "f2p"
-subtitle:    "Links"
+title:       "F2p Linktree"
+subtitle:    "My Links"
 author:      "f2p"
-description: "f2p links page."
+description: "f2p linktree page."
 
 # Logo (shown in a circular avatar)
 logo: /logo.png
 
 # QR code (desktop only, bottom right)
 qr_code:   /qr-code.svg
-qr_label:  "Scan to visit<br />f2p"
+qr_label:  "View on Mobile"
 
 # Social media links (each gets a round icon button)
 # Uncomment and configure the ones you need:
 social:
-  - platform: Instagram
-    url:      https://instagram.com/f2p
-    icon:     ti ti-brand-instagram
-  - platform: TikTok
-    url:      https://tiktok.com/@f2p
-    icon:     ti ti-brand-tiktok
-  - platform: Threads
-    url:      https://threads.net/@f2p
-    icon:     ti ti-brand-threads
-  - platform: Facebook
-    url:      https://facebook.com/f2p
-    icon:     ti ti-brand-facebook
+#  - platform: Instagram
+#    url:      https://instagram.com/f2p
+#    icon:     ti ti-brand-instagram
+#  - platform: TikTok
+#    url:      https://tiktok.com/@f2p
+#    icon:     ti ti-brand-tiktok
+#  - platform: Threads
+#    url:      https://threads.net/@f2p
+#    icon:     ti ti-brand-threads
+#  - platform: Facebook
+#    url:      https://facebook.com/f2p
+#    icon:     ti ti-brand-facebook
   - platform: Pinterest
-    url:      https://pinterest.com/f2p
+    url:      https://pinterest.com/b4rtbe
     icon:     ti ti-brand-pinterest
-  - platform: YouTube
-    url:      https://youtube.com/@f2p
-    icon:     ti ti-brand-youtube
+#  - platform: YouTube
+#    url:      https://youtube.com/@f2p
+#    icon:     ti ti-brand-youtube
 
 # Link sections — each section has a title and an array of link cards
 sections:
-  - section_title: "Section Title 👇"
+  - section_title: "My Website 👇"
     links:
-      - title:       "Link 1"
-        url:         https://example.com
-        description: "Optional description line"
-        icon:        ti ti-file-text
+      - title:       "www.f2p.be"
+        url:         https://f2p.be
+        description: "the main site"
+        icon:        ti ti-world
 
-  - section_title: "Another Section"
+  - section_title: "Side Projects"
     links:
-      - title:       "Link 2"
-        url:         https://example.com
-        description: "Another optional description"
+      - title:       "My Start Page"
+        url:         https://start.f2p.be
+        description: "A minimalistic start page"
         icon:        ti ti-shopping-bag
 
-      - title:       "Link 3"
-        url:         https://example.com
-        description: "Yet another link"
+      - title:       "This Linktree alternative"
+        url:         https://links.f2p.be
+        description: "You are looking at it"
         icon:        ti ti-world
 
 # Build
