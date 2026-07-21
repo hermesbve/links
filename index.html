@@ -1,1 +1,321 @@
-f2p links page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --bg: #0f0f0f;
+      --bg-card: #181818;
+      --bg-hover: #232323;
+      --text: #e0e0e0;
+      --text-muted: #8a8a8a;
+      --text-heading: #f0f0f0;
+      --border: #2a2a2a;
+      --accent: #b0b0b0;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --max-w: 520px;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      position: relative;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      overflow: hidden;
+      filter: grayscale(1);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .header .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    /* ===== SOCIAL ICONS ROW ===== */
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .social-row a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .social-row a:hover {
+      background: var(--bg-hover);
+      border-color: var(--accent);
+      color: var(--text-heading);
+      transform: translateY(-2px);
+    }
+
+    .social-row a i { font-size: 1.3rem; }
+
+    /* ===== SECTION HEADINGS ===== */
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      margin-top: 28px;
+      padding-left: 4px;
+    }
+
+    /* ===== LINK CARDS ===== */
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+      margin-bottom: 10px;
+    }
+
+    .link-card:last-child { margin-bottom: 0; }
+
+    .link-card:hover {
+      background: var(--bg-hover);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .link-card .thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(1);
+    }
+
+    .link-card .thumb i {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+    }
+
+    .link-card .body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .link-card .body .link-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.3;
+    }
+
+    .link-card .body .link-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    .link-card .arrow {
+      flex-shrink: 0;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .link-card:hover .arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    /* ===== QR CODE (desktop only) ===== */
+    .qr-desktop {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      filter: grayscale(1);
+    }
+
+    .qr-desktop .qr-img {
+      width: 80px;
+      height: 80px;
+      display: block;
+      border-radius: 6px;
+      filter: grayscale(1) invert(0.85);
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .qr-desktop:hover .qr-img { opacity: 1; }
+
+    .qr-desktop .qr-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      body { padding: 20px 16px 32px; }
+      .qr-desktop { display: none; }
+    }
+
+    @media (min-width: 769px) {
+      body { padding: 32px 24px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <div class="avatar">
+      <img src="{{ site.logo }}" alt="{{ site.title }}" />
+    </div>
+    <h1>{{ site.title }}</h1>
+    <div class="subtitle">{{ site.subtitle }}</div>
+  </div>
+
+  <!-- ===== SOCIAL ICONS ===== -->
+  <div class="social-row">
+    {% for s in site.social %}
+    <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.platform }}">
+      <i class="{{ s.icon }}"></i>
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- ===== LINK SECTIONS ===== -->
+  {% for section in site.sections %}
+  <div class="section-title">{{ section.section_title }}</div>
+
+  {% for link in section.links %}
+  <a class="link-card" href="{{ link.url }}" target="_blank" rel="noopener">
+    <div class="thumb">
+      <i class="{{ link.icon }}"></i>
+    </div>
+    <div class="body">
+      <div class="link-title">{{ link.title }}</div>
+      {% if link.description %}
+      <div class="link-desc">{{ link.description }}</div>
+      {% endif %}
+    </div>
+    <i class="ti ti-chevron-right arrow"></i>
+  </a>
+  {% endfor %}
+
+  {% endfor %}
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">{{ site.author }} &middot; {{ site.title }}</div>
+
+</div>
+
+<!-- ===== QR CODE — desktop only ===== -->
+<div class="qr-desktop">
+  <img class="qr-img" src="{{ site.qr_code }}" alt="QR Code" />
+  <div class="qr-label">{{ site.qr_label }}</div>
+</div>
+
+</body>
+</html>
