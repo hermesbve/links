@@ -52,10 +52,15 @@ sections:
         description: "A minimalistic start page"
         icon:        ti ti-shopping-bag
 
+      - title:       "Test: Blogging via Hermes"
+        url:         https://blog.f2p.be
+        description: "Using Hermes to build a blog"
+        icon:        ti ti-shopping-bag
+
       - title:       "This Linktree alternative"
         url:         https://links.f2p.be
         description: "You are looking at it"
-        icon:        ti ti-world
+        icon:        ti ti-file-arrow-right
 
 # Build
 markdown: kramdown
