@@ -50,12 +50,12 @@ sections:
       - title:       "My Start Page"
         url:         https://start.f2p.be
         description: "A minimalistic start page"
-        icon:        ti ti-shopping-bag
+        icon:        ti ti-arrow-big-right-lines
 
       - title:       "Test: Blogging via Hermes"
         url:         https://blog.f2p.be
         description: "Using Hermes to build a blog"
-        icon:        ti ti-shopping-bag
+        icon:        ti ti-file-check
 
       - title:       "This Linktree alternative"
         url:         https://links.f2p.be
